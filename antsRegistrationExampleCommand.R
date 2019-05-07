@@ -64,7 +64,7 @@ outputPrefix <- paste0( outputDirectory, 'antsr' )
 registrationWithMask <- antsRegistration(
   fixed = fixedImage, moving = movingImage,
   mask = list( fixedMask, movingMask ),
-  typeOfTransform = "SyNOnly",
+  typeofTransform = "SyNOnly",
   regIterations = c( 100, 75, 20, 0 ),
   verbose = TRUE, outprefix = outputPrefix )
 
