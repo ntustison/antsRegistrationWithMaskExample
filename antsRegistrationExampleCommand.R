@@ -68,8 +68,8 @@ registrationWithMask <- antsRegistration(
   regIterations = c( 100, 75, 20, 0 ),
   verbose = TRUE, outprefix = outputPrefix )
 
-antsImageWrite( registrationNoMask$warpedmovout, paste0( outputPrefix, "Warped.nii.gz" ) )
-antsImageWrite( registrationNoMask$warpedfixout, paste0( outputPrefix, "InverseWarped.nii.gz" ) )
+antsImageWrite( registrationWithMask$warpedmovout, paste0( outputPrefix, "Warped.nii.gz" ) )
+antsImageWrite( registrationWithMask$warpedfixout, paste0( outputPrefix, "InverseWarped.nii.gz" ) )
 
 # Plot the fixed and warped moving image
 plot( fixedImage, registrationWithMask$warpedmovout, color.overlay = "jet", alpha = 0.4 )
